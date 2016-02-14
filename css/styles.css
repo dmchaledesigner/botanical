@@ -1,0 +1,1192 @@
+/*! HTML5 Boilerplate v5.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1em;
+    font-family: 'Lato', sans-serif;
+
+}
+
+
+img{
+    width: 100%;
+    vertical-align: middle;
+
+}
+
+
+
+
+/* ==========================================================================
+   Swatches:
+
+   Black: #000;
+   Grey: #555;
+   Light: #989898;
+   Purple: rgb(67, 55, 79)
+   Peach: rgb(220, 135, 119)
+   Green: rgb(198, 218, 216);
+    
+    
+    Fonts:
+    Lato;
+
+
+
+
+
+   ========================================================================== */
+
+
+
+
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+section{
+    margin-top: 50px;
+}
+
+section.menu,
+section.start-page.parallax-background{
+    margin-top: 0;
+}
+
+
+/* Start page */
+
+.wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%
+}
+
+.start-page{
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    height: 1040px;
+    background: url('../img/start-page.jpg') 0px 0px fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+}
+
+.start-page hr{
+  color: white;
+  margin-top:30px;
+  background-color: white;
+  height: 1px;
+  width:106px;
+  border:0;
+
+}
+
+.start-page .opacity{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(51,51,51,0.2); /* Standard Off */
+}
+
+
+.start-page .content{
+  position:relative;
+  width:700px;
+  margin:0 auto;
+  height:100%;
+}
+
+.start-page .content .text{
+  position:absolute;
+  text-align:center;
+  margin:auto;
+  top:0; 
+  left:0; 
+  bottom:0; 
+  right:0;
+  width:700px;
+  height:520px;
+}
+
+.start-page .content .text .logo{
+  width:auto;
+  height:123px;
+  margin:0 auto 0px;
+  
+}
+
+
+.start-page .content .text .read-more a{
+  width:183px;
+  height:47px;
+  margin:100px auto;
+  line-height:47px;
+  border:1px solid white;
+  text-transform:uppercase;
+  color:white;
+  display:block;
+  cursor:pointer;
+  font-size:14px;
+  letter-spacing:1px;
+  background:none;
+  text-decoration: none;
+  -webkit-transition: all 0.6s ease-in;
+    -moz-transition: all 0.6s ease-in;
+    -ms-transition: all 0.6s ease-in;
+    -o-transition: all 0.6s ease-in;
+    transition: all 0.6s ease-in;
+}
+
+.start-page .content .text .read-more a:hover{
+  color:white;
+  background: rgb(220, 135, 119);
+  border:1px solid #ada074;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+/* Menu mobile */
+
+.menu-media{
+  position:relative;
+  width:100%;
+  height:90px;
+  background:#ada074;
+  z-index:1000;
+  display:none;
+}
+
+.menu-media .menu-content{
+  width:280px;
+  position:relative;
+  margin:0 auto;
+}
+
+.menu-media .menu-content .logo {
+   color:white;
+   font-weight:700;
+   font-size:24px;
+   width:200px;
+   line-height:90px;
+   float:left;
+   list-style: none;
+}
+
+.menu-media .menu-content .icon{
+  width:41px;
+  height:23px;
+  float:right;
+  line-height:100px;
+}
+
+.menu-click{
+  display:none;
+}
+
+
+.menu-click li {
+  position:relative;
+  width:100%;
+  height:70px;
+  color:#333333;
+  font-size:18px;
+  text-align:center;
+  line-height:70px;
+  z-index:1000;
+  border-bottom:1px solid #f2f2f2;
+  -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+ }
+
+.menu-click li:hover {
+  color:#ada074;
+ }
+
+
+/* Menu */
+
+.menu{
+  position:relative;
+  width:100%;
+  height:60px;
+  background:white;
+/*  border-bottom:1px solid #f2f2f2;
+*/  z-index:1000;
+}
+
+.menu nav.navbar.navbar-default{
+   /* background-color: rgb(220, 135, 119);
+    border: 0;*/
+}
+
+.menu .navbar-default .navbar-nav > li.active > a{
+  color: #fff;
+  background-color: rgb(67, 55, 79);
+
+}
+
+.menu .navbar-default .navbar-nav > li > a:hover,
+.menu .navbar-default .navbar-nav > li > a:focus{
+  color: #fff;
+  background-color: rgb(220, 135, 119);
+
+
+}
+
+
+
+
+.menu-content{
+  width:900px;
+  position:relative;
+  margin:0 auto;
+}
+
+.menu-content .logo {
+   color:#333;
+   font-weight:700;
+   font-size:24px;
+   width:300px;
+   line-height:60px;
+   float:left;
+   list-style: none;
+ }
+
+.menu-content ul{
+
+  width:500px;
+  left:50%;
+  float:right;
+  text-align:right;
+  list-style:none;
+}
+
+.menu-content li{
+   display:inline-block;
+   position:relative;
+}
+
+.menu-content li a{
+  color:#333;
+  font-size:16px;
+  display: block;
+  padding: 0 20px 0 20px;
+  line-height:60px;
+  -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.menu-content li.active a{
+  color:#ada074;
+}
+
+.menu-content li a:hover{
+  color:#ada074;
+}
+
+
+.menu .dropdown-menu{
+    box-shadow: none;
+    border-radius: 0;
+}
+
+p.lead{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+
+/*INTRO*/
+
+
+
+h1.hometitle{
+    margin-top: 0;
+    color: rgba(255, 255, 255, .8);
+}
+
+
+.text p{
+    color: #fff;
+}
+
+
+
+
+/* About us */
+
+.about-us{
+  position:relative;
+  width:100%;
+  background:white;
+  z-index:10;
+}
+
+
+
+.about-us h1{
+  font-size:34px;
+  color:rgb(67, 55, 79);
+  text-align:center;
+  margin-top:50px;
+  letter-spacing:6px;
+  font-weight:bold;
+  text-transform:uppercase;
+  line-height:1.2;
+}
+
+
+
+.about-us hr{
+  color: rgb(198, 218, 216);
+  margin: 0 auto;
+  margin-top:15px;
+  background-color: rgb(198, 218, 216);
+  height: 1px;
+  width:106px;
+  border:0;
+  width: 100%;
+
+}
+
+.about-us p.title{
+  color: #a4a4a4;
+  margin:40px auto;
+  width:300px;
+  line-height:26px;
+  letter-spacing:0;
+  font-size:14px;
+  font-weight:300;
+  text-align:center;
+}
+
+.about-us h2{
+  text-align:center;
+  margin-top:50px;
+  font-size:26px;
+  color:rgb(220, 135, 119);
+  line-height:1.2;
+  letter-spacing:6px;
+  width:100%;
+  position:relative;
+  font-weight:400;
+}
+
+.about-us p{
+  text-align:center;
+  font-size:14px;
+  margin:30px auto;
+  color:#a4a4a4;
+  line-height:26px;
+  letter-spacing:0;
+  position:relative;
+  font-weight:300;
+}
+
+.iconblock{
+    margin-top: 25px;
+}
+
+.about-us .column-one{
+  margin-top:40px;
+  width:300px;
+  float:left;
+  margin-bottom:70px;
+  height:350px;
+}
+
+.circle-one{
+  height: 100px;
+  position:relative;
+  margin:0 auto;
+  background: url('../img/building.png') white no-repeat center center;
+  width: 100px;
+/*  cursor:pointer;
+*/    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in
+}
+
+/*.circle-one:hover{
+  border:2px solid rgb(220, 135, 119);
+
+}*/
+
+.about-us .column-two{
+  margin-top:40px;
+  width:300px;
+  float:left;
+  margin-bottom:70px;
+  height:350px;
+}
+
+.circle-two{
+  height: 100px;
+  position:relative;
+  margin:0 auto;
+  background: url('../img/drinks.png') white no-repeat center center;
+  width: 100px;
+/*    cursor:pointer;
+*/    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    border: none;
+}
+
+/*.circle-two:hover{
+  border:2px solid rgb(220, 135, 119);
+}*/
+
+
+
+
+.circle-three{ 
+  height: 100px;
+  position:relative;
+  margin:0 auto;
+  background: url('../img/sticker.png') white no-repeat center center;
+  width: 100px;
+/*  cursor:pointer;
+*/  -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+/*.circle-three:hover{ 
+  border:2px solid rgb(220, 135, 119);
+}
+*/
+
+.iconblock h2{
+    margin-top: 15px;
+}
+
+.imgblock{
+    position: relative;
+    cursor:pointer;
+    display: block;
+}
+
+    
+.hoverinfo{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255,255,255, .0);
+  transition: background-color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  display: block;
+}
+
+.hoverinfo:hover{
+ 
+  background-color: rgba(255,255,255, .8);
+}
+
+
+.hoverinfo a.readpost{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 25%;
+  color: rgba(255,255,255, .0);
+  transition: background-color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 100;
+  vertical-align: center;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+
+}
+
+.hoverinfo a.readpost:hover{
+  color: #000;
+}
+
+
+
+
+
+
+
+
+
+/* DESIGN */
+
+section#design{
+  padding-top: 30px;
+}
+
+.quote{
+  position:relative;
+  width:100%;
+  z-index:10;
+  height:400px;
+  background:url('../img/quote.jpg') 0px 0px fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.quote .opacity{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: -2;
+}
+
+
+
+.quote.content{
+  position:absolute;
+  width:900px;
+  height:300px;
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index: 99999;
+}
+
+.quote h2{
+  font-size: 34px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    padding: 30px 120px;
+
+}
+
+.quote p{
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    line-height: 20px;
+    letter-spacing: 0;
+    position: relative;
+    font-weight: 300;
+    width: 100%;
+    padding-left: 120px;
+    padding-right: 120px;
+
+}
+
+
+
+
+
+
+
+
+/* ARCHITECTS */
+
+section#architects{
+  padding-top: 30px;
+}
+
+.architects{
+  position:relative;
+  width:100%;
+  z-index:10;
+  height:400px;
+  background:url('../img/architects.jpg') 0px 0px fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.architects .opacity{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: -2;
+}
+
+
+
+.architects.content{
+  position:absolute;
+  width:900px;
+  height:300px;
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index: 99999;
+}
+
+.architects h2{
+  font-size: 34px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    padding: 30px 120px;
+
+}
+
+.architects p{
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    line-height: 20px;
+    letter-spacing: 0;
+    position: relative;
+    font-weight: 300;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+
+
+
+
+/* QUALITY */
+
+section#quality{
+  padding-top: 30px;
+}
+
+.quality{
+  position:relative;
+  width:100%;
+  z-index:10;
+  height:400px;
+  background:url('../img/build_img.jpg') 0px 0px fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.quality .opacity{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: -2;
+}
+
+
+
+.quality.content{
+  position:absolute;
+  width:900px;
+  height:300px;
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index: 99999;
+}
+
+.quality h2{
+  font-size: 34px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    padding: 30px 120px;
+
+}
+
+.quality p{
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    line-height: 20px;
+    letter-spacing: 0;
+    position: relative;
+    font-weight: 300;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+.gallery h1{
+    font-size: 34px;
+    color: rgb(67, 55, 79);
+    text-align: center;
+    margin-top: 50px;
+    letter-spacing: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.gallery hr{
+    color: black;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: black;
+    height: 1px;
+    width: 106px;
+    border: 0;
+    width: 100%;
+}
+
+.gallerywrapper{
+    margin-top: 30px;
+}
+
+
+
+
+.highslide-gallery p,
+footer p{
+  margin-top: 15px;
+  font-family: 'Lato', sans-serif;
+  text-align: left;
+  font-size: 14px;
+  margin: 15px auto;
+  color: #a4a4a4;
+  line-height: 20px;
+  letter-spacing: 0;
+  position: relative;
+  font-weight: 300;
+
+}
+
+
+
+
+
+
+
+
+
+
+footer{
+  position: relative;
+  width: 100%;
+  background-color: rgb(67, 55, 79);
+  padding-top: 50px;
+  padding-bottom: 120px;
+}
+
+
+
+footer .newsletter p{
+  margin-bottom: 0px;
+  font-size: 16px;
+}
+
+footer .newsletter h2{
+  color: rgb(220, 135, 119);
+  margin-top: 5px;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0;
+  font-weight: 300;
+
+}
+
+
+footer form{
+  width: 100%;
+  display: block;
+}
+
+form .form .newsletter .form-group label{
+  color: #989898;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+footer .form .newsletter .form-group input{
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  background-color: rgb(198, 218, 216);
+  border-top: 1px solid;
+  border: 0;
+  clear: left;
+}
+
+footer .form .newsletter .form-group input:focus{
+  border-color: rgb(220, 135, 119);
+  box-shadow: 0 1px 1px rgb(220, 135, 119) inset, 0 0 8px rgb(220, 135, 119);
+  outline: 0 none;
+}
+
+footer .form .newsletter .form-group textarea{
+  width: 100%;
+  height: 100px;
+  padding-left: 10px;
+  background-color: rgb(198, 218, 216);
+  border: 0;
+  clear: left;
+}
+
+footer .form .newsletter .form-group textarea:focus{
+  border-color: rgb(220, 135, 119);
+  box-shadow: 0 1px 1px rgb(220, 135, 119) inset, 0 0 8px rgb(220, 135, 119);
+  outline: 0 none;
+}
+
+
+footer .form .newsletter .form-group input[type="submit"]{
+    width: auto;
+    background-color: rgb(220, 135, 119);
+    clear: left;
+    display: block;
+    padding: 15px 20px;
+    font-weight: bold;
+    margin-top: 0;
+    padding: 0;
+    padding: 0 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+}
+
+
+
+
+.footerlogowrapper{
+  width: 60%;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px 15px;
+}
+
+
+.footerlogowrapper .footertagline{
+  width: 100%;
+  text-align: center;
+}
+
+
+.footerlogowrapper .footertagline h1.footertitle{
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+.footerlogowrapper p{
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  padding-top: 5px;
+  margin-top: 0;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
